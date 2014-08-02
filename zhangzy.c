@@ -89,7 +89,7 @@ ZEND_FUNCTION(zhangzy_array) {
 	add_next_index_long(array, 10);
 	add_next_index_long(array, 100);
 	add_index_zval(return_value, 567, array);
-} 
+}  
 
 //指定的value做key
 ZEND_FUNCTION(zhangzy_vtok) {
