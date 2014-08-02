@@ -75,6 +75,7 @@ ZEND_FUNCTION(zhangzy_count) {
 }
 //数组
 ZEND_FUNCTION(zhangzy_array) {
+<<<<<<< HEAD
     zval *array;
     array_init(return_value); //初始化，参数必须是zval类型
 
@@ -90,6 +91,23 @@ ZEND_FUNCTION(zhangzy_array) {
     add_next_index_long(array, 100);
     add_index_zval(return_value, 567, array);
 }
+=======
+	zval *array;
+	array_init(return_value); //初始化，参数必须是zval类型
+
+	add_assoc_long(return_value, "lefe", 42);
+	add_index_bool(return_value, 123, 1);
+	add_next_index_double(return_value, 3.1415926);
+	add_next_index_string(return_value, "foo", 1);
+	add_next_index_string(return_value, estrdup("bar"), 0);	//手动申请空间
+	MAKE_STD_ZVAL(array);
+	array_init(array);
+	add_next_index_long(array, 1);
+	add_next_index_long(array, 10);
+	add_next_index_long(array, 100);
+	add_index_zval(return_value, 567, array);
+}  
+>>>>>>> release/v0.1
 
 //指定的value做key
 ZEND_FUNCTION(zhangzy_vtok) {
