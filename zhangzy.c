@@ -28,7 +28,6 @@ ZEND_FUNCTION(zhangzy_ref) {
 	//更改a的数据
 	ZVAL_STRING(a, "new string", 1);
 	return;
-
 }
 //接收1个参数的函数
 ZEND_FUNCTION(zhangzy_param) {
